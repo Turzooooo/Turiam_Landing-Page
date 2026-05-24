@@ -166,39 +166,3 @@ dots.forEach((dot, index) => {
 });
 
 
-// SCROLL TO TOP BUTTON
-
-const topBtn = document.createElement("button");
-
-topBtn.innerText = "↑";
-
-document.body.appendChild(topBtn);
-
-topBtn.style.position = "fixed";
-topBtn.style.bottom = "20px";
-topBtn.style.right = "20px";
-topBtn.style.padding = "10px 15px";
-topBtn.style.border = "none";
-topBtn.style.background = "#ff5a36";
-topBtn.style.color = "#fff";
-topBtn.style.cursor = "pointer";
-topBtn.style.display = "none";
-
-window.addEventListener("scroll", function () {
-
-  if (window.scrollY > 300) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
-
-});
-
-topBtn.addEventListener("click", function () {
-
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-
-});
